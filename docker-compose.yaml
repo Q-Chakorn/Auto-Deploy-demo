@@ -4,8 +4,6 @@ services:
     image: rancher/hello-world:latest
     ports:
       - 80
-    networks:
-      - webproxy
     deploy:
       replicas: 16
       resources:
