@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  hello:
+  chakornhello:
     image: rancher/hello-world:latest
     networks:
       - webproxy
@@ -11,10 +11,10 @@ services:
       labels:
         traefik.docker.network: webproxy
         traefik.enable: 'true'
-        traefik.http.routers.hello-https.entrypoints: websecure
-        traefik.http.routers.hello-https.rule: Host(`chakornhello.xops.ipv9.xyz`)
-        traefik.http.routers.hello-https.tls.certresolver: default
-        traefik.http.services.hello.loadbalancer.server.port: '80'
+        traefik.http.routers.chakornhello-https.entrypoints: websecure
+        traefik.http.routers.chakornhello-https.rule: Host(`chakornhello.xops.ipv9.xyz`)
+        traefik.http.routers.chakornhello-https.tls.certresolver: default
+        traefik.http.services.chakornhello.loadbalancer.server.port: '80'
       resources:
         reservations:
           cpus: '0.1'
