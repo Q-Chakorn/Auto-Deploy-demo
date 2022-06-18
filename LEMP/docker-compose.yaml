@@ -82,5 +82,5 @@ services:
 
 networks:
   default:
-    name: web_network
+    name: webproxy
     external: true
