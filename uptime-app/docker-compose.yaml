@@ -22,7 +22,7 @@ services:
         - traefik.http.routers.${APPNAME}.entrypoints=websecure
         - traefik.http.routers.${APPNAME}.rule=Host(`${APPNAME}.${DOMAIN}`)
         - traefik.http.routers.${APPNAME}.tls.certresolver=default
-        - traefik.http.services.${APPNAME}.loadbalancer.server.port=3001
+        - traefik.http.services.${APPNAME}.loadbalancer.server.port:'80'
 
 
 volumes:
