@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   kasm_web:
-    image: docker pull kasmweb/ubuntu-bionic-desktop:1.10.0-rolling
+    image: kasmweb/ubuntu-bionic-desktop:1.10.0-rolling
     shm_size: '512mb'
     volumes:
       - /etc/timezone:/etc/timezone:ro
