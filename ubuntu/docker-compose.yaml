@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   kasm_web:
-    image: ipvsix/ubuntu-desktop:jun22
+    image: kasmweb/ubuntu-bionic-desktop
     shm_size: '512mb'
     volumes:
       - /etc/timezone:/etc/timezone:ro
@@ -9,7 +9,7 @@ services:
     environment:
       VNC_PW: '${PASSWORD}'
     ports:
-      - 6901
+      - 6901:6901
     logging:
       driver: json-file
     deploy:
